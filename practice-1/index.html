@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/practice-1/style/form.css">
+    <link rel="stylesheet" href="/practice-1/style/media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Black+Ops+One&family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="wrapper">
+        <h2>WebDevMax</h2>
+        <button class="open">Написать</button>
+    </div>
+
+
+    <div class="container">
+        
+        <div class="form-container form__wrapper">
+            <h1>Стать партнером проекта</h1>
+          <form id="feedback-form" action="" enctype="multipart/form-data" novalidate>
+            <div class="form-column">
+                <div class="form-row">
+                <!-- Имя пользователя -->
+                    <div class="form-group">
+                        <label for="organization" class="control-label"><span>&#10059;</span>Название организации</label>
+                        <input id="organization" type="text" name="organization" class="form-control" value="" placeholder="" minlength="2"
+                        maxlength="30" required="required">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                <!-- Телефон -->
+                    <div class="form-group">
+                        <label for="phone" class="control-label"><span>&#10059;</span>Телефон</label>
+                        <div class="input-group">
+                        <input id="phone" type="tel" name="phone" class="form-control style_input phone_mask" placeholder="" value="" required="required" autocomplete="off">
+                        <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                <!-- Email пользователя -->
+                    <div class="form-group">
+                        <label for="email" class="control-label"><span>&#10059;</span>Email-адрес</label>
+                        <input id="email" type="email" name="email" required="required" class="form-control" value=""
+                        placeholder="">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <!-- Файлы, для прикрепления к форме -->
+                <div class="form-group form-attach">
+                    <div class="form-attach__label"><span>&#10059;</span>Логотип (jpeg, png)</div>
+                    <div class="form-attach__wrapper">
+                        <input type="file" name="attach[]" multiple required="required">
+                        <div class="form-attach__description">
+                            <div class="close-img">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <img src="/practice-1/img/Vector.png" alt="">
+                            <div class="text-sm">Выберите файл</div>
+                        </div>
+                        <div class="form-attach__items"></div>
+                    </div>
+                    <div class="invalid-feedback"></div>
+                </div>
+            </div>
+            <!-- Направление -->
+            <div class="form-group">
+                <label for="direction" class="control-label"><span>&#10059;</span>Направление</label>
+                <select name="direction" id="direction" required="required">
+                    <option value="Экология">Экология</option>
+                </select>
+                <div class="invalid-feedback"></div>
+            </div>
+            
+            <!-- сайт -->
+            <div class="form-group__extra">
+                <label for="site" class="control-label"><img src="/practice-1/img/site.png" alt=""></label>
+                <input id="site" type="text" name="site" class="form-control" value="" placeholder="site.com" minlength="2"
+                maxlength="30">
+            </div>
+            <!-- VK -->
+            <div class="form-group__extra">
+                <label for="vk" class="control-label"><img src="/practice-1/img/vk.png" alt=""></label>
+                <input id="vk" type="text" name="vk" class="form-control" value="" placeholder="vk.com" minlength="2"
+                maxlength="30">
+            </div>
+            <!-- Одноклассники -->
+            <div class="form-group__extra">
+                <label for="odn" class="control-label"><img src="/practice-1/img/odn.png" alt=""></label>
+                <input id="odn" type="text" name="odn" class="form-control" value="" placeholder="ok.ru" minlength="2"
+                maxlength="30">
+            </div>
+            <!-- Facebook -->
+            <div class="form-group__extra">
+                <label for="facebook" class="control-label"><img src="/practice-1/img/facebook.png" alt=""></label>
+                <input id="facebook" type="text" name="facebook" class="form-control" value="" placeholder="facebook.com" minlength="2"
+                maxlength="30">
+            </div>
+            <!-- Instagramm -->
+            <div class="form-group__extra">
+                <label for="instargram" class="control-label"><img src="/practice-1/img/insta.png" alt=""></label>
+                <input id="instargram" type="text" name="instargram" class="form-control" value="" placeholder="instargram.com" minlength="2"
+                maxlength="30">
+            </div>
+             <!-- youtube -->
+             <div class="form-group__extra">
+                <label for="youtube" class="control-label"><img src="/practice-1/img/youtube.png" alt=""></label>
+                <input id="youtube" type="text" name="youtube" class="form-control" value="" placeholder="youtube.com" minlength="2"
+                maxlength="30">
+            </div>
+             <!-- Email пользователя -->
+             <div class="form-group">
+                <label for="supervisor" class="control-label">Руководитель</label>
+                <input id="supervisor" type="text" name="supervisor"  class="form-control" value=""
+                placeholder="">
+            </div>
+            <!-- Кнопка для отправки формы на сервер -->
+            <div class="form-submit">
+              <button type="submit">Стать партнёром проекта</button>
+            </div>
+            
+            <div class="close">
+                <button class="close-btn" type="reset">Отменить</button>
+              </div>
+
+          </form>
+    
+        </div>
+      </div>
+<script src="/practice-1/script/add.js"></script>
+<script src="/practice-1/script/form-processing.js"></script>
+<script>
+    ItcSubmitForm.getOrCreateInstance('form');
+
+document.addEventListener('itc.successSendForm', (e) => {
+  const el = e.target.closest('.form-container').querySelector('.form-success');
+  el.classList.remove('form-success_hide');
+});
+
+// при клике на .form-success__btn
+document.querySelector('.form-success__btn').addEventListener('click', (e) => {
+  const el = e.target.closest('.form-container').querySelector('form');
+  const form = ItcSubmitForm.getOrCreateInstance(el);
+  form.reset();
+  e.target.closest('.form-container').querySelector('.form-success').classList.add('form-success_hide');
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+@media only screen and (max-width:1260px){ 
+    
+    .form-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+    }
+    .form-column{
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .form-column input{
+       
+    }
+}
+
+@media only screen and (max-width:992px){
+
+    .form-container h1{
+        text-align: center;
+    }
+}
+
+
+
+
+@media only screen and (max-width:768px){ 
+    .container{
+        padding: 0;
+    }
+    .form-container{
+        width: 100%;
+    }
+    .form-column input{
+        width: 90vw;
+    }
+    .form-attach__wrapper input{
+        width: 50%;
+    }
+    input{
+        width: 90vw;
+    }
+}
+
+
+/* МОБИЛКА*/
+@media only screen and (max-width:570px){  
+    .form-container{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:400px){
+    input{
+        width: 100vw;
+    }
+}
+@media only screen and (max-width:320px){
+  
+} 
